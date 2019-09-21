@@ -167,6 +167,8 @@
     <Compile Include="Models\MarinaDB.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Slip.cs" />
+    <Compile Include="Models\SlipCartItem.cs" />
+    <Compile Include="Models\SlipCartItemList.cs" />
     <Compile Include="Models\SlipDB.cs" />
     <Compile Include="Order.aspx.cs">
       <DependentUpon>Order.aspx</DependentUpon>
