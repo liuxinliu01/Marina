@@ -78,6 +78,9 @@
       <LastGenOutput>Slip.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="LogIn.aspx" />
+    <Content Include="Register.aspx" />
+
     <Content Include="AvailableSlips.aspx" />
     <None Include="Slip.dbml.layout">
       <DependentUpon>Slip.dbml</DependentUpon>
@@ -198,6 +201,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Slip.dbml</DependentUpon>
     </Compile>
+
+    <Compile Include="LogIn.aspx.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogIn.aspx.designer.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+
     <Compile Include="AvailableSlips.aspx.cs">
       <DependentUpon>AvailableSlips.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
