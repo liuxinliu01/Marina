@@ -78,6 +78,7 @@
       <LastGenOutput>Slip.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="AvailableSlips.aspx" />
     <None Include="Slip.dbml.layout">
       <DependentUpon>Slip.dbml</DependentUpon>
     </None>
@@ -196,6 +197,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Slip.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="AvailableSlips.aspx.cs">
+      <DependentUpon>AvailableSlips.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AvailableSlips.aspx.designer.cs">
+      <DependentUpon>AvailableSlips.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

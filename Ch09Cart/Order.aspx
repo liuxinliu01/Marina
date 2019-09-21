@@ -16,7 +16,7 @@
                 </div>
             </div>   
         </div>
-    </div><%-- data gridview  --%>
+    </div><%-- end of row 2 --%>
     <div class="row"><%-- end of row 2 --%>
         <div class="col-sm-12">
             <div class="form-group">
@@ -41,14 +41,20 @@
                     <asp:Label ID="SlipIDLabel" runat="server" Text="Slip ID"></asp:Label>
                     <asp:TextBox ID="SlipIDTextBox" runat="server"></asp:TextBox>
                     <br />
+                    <asp:Label ID="LeaseStatusLabel" runat="server" Text="Slip lease status" Visible="False"></asp:Label>
                     <br />
+                    <asp:GridView ID="LeaseStatusGridView" runat="server" Visible="False">
+                    </asp:GridView>
                     <br />
                     </div>
+            
+                <br />
+                <br />
             </div>
             <div class="form-group">
                 <div class="col-sm-12">
-                    <asp:Button ID="btnAdd" runat="server" Text="Add to Cart" 
-                        onclick="btnAdd_Click" CssClass="btn" />
+                    <asp:Button ID="LeaseBtn" runat="server" Text="Lease" 
+                        onclick="LeaseBtn_Click" CssClass="btn" />
                     <asp:Button ID="btnCart" runat="server" Text="Go to Cart" 
                         PostBackUrl="~/Cart.aspx" CausesValidation="False" CssClass="btn" />
                 </div>

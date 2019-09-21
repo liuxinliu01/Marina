@@ -67,13 +67,31 @@ namespace Ch09Cart {
         protected global::System.Web.UI.WebControls.TextBox SlipIDTextBox;
         
         /// <summary>
-        /// btnAdd control.
+        /// LeaseStatusLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAdd;
+        protected global::System.Web.UI.WebControls.Label LeaseStatusLabel;
+        
+        /// <summary>
+        /// LeaseStatusGridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView LeaseStatusGridView;
+        
+        /// <summary>
+        /// LeaseBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button LeaseBtn;
         
         /// <summary>
         /// btnCart control.

@@ -25,12 +25,13 @@ namespace Ch09Cart.Models
             set { slipcartItems[index] = value; }
         }
 
-        public SlipCartItem this[int id]
+        public SlipCartItem this[string id]
         {
+            
             get
             {
                 foreach (SlipCartItem c in slipcartItems)
-                    if (c.Slip.SlipID == id) return c;
+                    if (c.Slip.SlipID ==Convert.ToInt32(id)) return c;
                 return null;
             }
         }

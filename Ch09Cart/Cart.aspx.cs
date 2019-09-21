@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ch09Cart.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,13 +10,13 @@ namespace Ch09Cart
 {
     public partial class Cart : System.Web.UI.Page
     {
-        private CartItemList cart;
+        private SlipCartItemList cart;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             Master.HeaderText = "Your Shopping Cart";
 
-            cart = CartItemList.GetCart();
+            cart = SlipCartItemList.GetCart();
             if (!IsPostBack)
                 this.DisplayCart();
         }
@@ -23,7 +24,7 @@ namespace Ch09Cart
         private void DisplayCart()
         {
             lstCart.Items.Clear();
-            CartItem item;
+            SlipCartItem item;
             for (int i = 0; i < cart.Count; i++)
             {
                 item = cart[i];

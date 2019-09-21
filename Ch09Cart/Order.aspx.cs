@@ -88,5 +88,30 @@ namespace Ch09Cart
             return s;
         }
 
+        protected void LeaseBtn_Click(object sender, EventArgs e)
+        {
+            List<Slip> sls = new List<Slip>();
+            //Slip sl = new Slip();
+            Lease l = new Lease();
+            using(SlipDataContext dbContent = new SlipDataContext())
+            {
+                var selectedSlips = from ls in dbContent.Leases
+                                    join c in dbContent.Customers on ls.CustomerID equals c.ID
+                                    join s in dbContent.Slips on ls.SlipID equals s.ID
+                                    join d in dbContent.Docks on s.DockID equals d.ID
+                                    select new
+                                    {
+                                        s.ID,
+                                        s.Width,
+                                        s.Length,
+                                        d.Name,
+                                        c.LastName
+                                    };
+                LeaseStatusGridView.DataSource = selectedSlips;
+                LeaseStatusGridView.DataBind();
+                LeaseStatusLabel.Visible = true;
+                LeaseStatusGridView.Visible = true;
+            }
+        }
     }
 }
