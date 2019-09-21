@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Slip">
+  <DataContextMoniker Name="/SlipDataContext" />
+  <nestedChildShapes>
+    <classShape Id="cc0ce958-e516-4e0a-a88d-1fd433d03058" absoluteBounds="5.25, 0.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SlipDataContext/Slip" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d2827bf7-4be4-423d-94af-89253f79f6d2" absoluteBounds="5.2650000000000006, 1.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2d07cb33-2a30-416c-a288-90b0ed46bd39" absoluteBounds="5.25, 2.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SlipDataContext/Dock" />
+      <nestedChildShapes>
+        <elementListCompartment Id="68e42596-9c4d-4839-9615-dedb802657d6" absoluteBounds="5.265, 2.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.25 : 2.5); (6.25 : 2.20359537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SlipDataContext/Dock/Dock_Slip" />
+      <nodes>
+        <classShapeMoniker Id="2d07cb33-2a30-416c-a288-90b0ed46bd39" />
+        <classShapeMoniker Id="cc0ce958-e516-4e0a-a88d-1fd433d03058" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6ac67b1f-4c65-4186-b831-0af90520b8fc" absoluteBounds="2.125, 2.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/SlipDataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4402564e-f62a-48cb-b949-dc0b31ca0805" absoluteBounds="2.14, 3.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bdac4a26-1c64-4c9b-9419-eece16302763" absoluteBounds="2, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/SlipDataContext/Lease" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f7ebd347-599e-49bd-acf5-7a593ff1c0de" absoluteBounds="2.0149999999999997, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.0625 : 2.625); (3.0625 : 2.1362939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SlipDataContext/Customer/Customer_Lease" />
+      <nodes>
+        <classShapeMoniker Id="6ac67b1f-4c65-4186-b831-0af90520b8fc" />
+        <classShapeMoniker Id="bdac4a26-1c64-4c9b-9419-eece16302763" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.25 : 1.44314697265625); (4 : 1.44314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SlipDataContext/Slip/Slip_Lease" />
+      <nodes>
+        <classShapeMoniker Id="cc0ce958-e516-4e0a-a88d-1fd433d03058" />
+        <classShapeMoniker Id="bdac4a26-1c64-4c9b-9419-eece16302763" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

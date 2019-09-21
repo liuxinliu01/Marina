@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Marina" Class="SlipDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost\sqlexpress;Initial Catalog=Marina;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="MarinaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Slip" Member="Slips">
+    <Type Name="Slip">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Width" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Length" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DockID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Slip_Lease" Member="Leases" ThisKey="ID" OtherKey="SlipID" Type="Lease" />
+      <Association Name="Dock_Slip" Member="Dock" ThisKey="DockID" OtherKey="ID" Type="Dock" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Dock" Member="Docks">
+    <Type Name="Dock">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="WaterService" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ElectricalService" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Dock_Slip" Member="Slips" ThisKey="ID" OtherKey="DockID" Type="Slip" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customer" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(14) NOT NULL" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="Customer_Lease" Member="Leases" ThisKey="ID" OtherKey="CustomerID" Type="Lease" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Lease" Member="Leases">
+    <Type Name="Lease">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SlipID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Customer_Lease" Member="Customer" ThisKey="CustomerID" OtherKey="ID" Type="Customer" IsForeignKey="true" />
+      <Association Name="Slip_Lease" Member="Slip" ThisKey="SlipID" OtherKey="ID" Type="Slip" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
