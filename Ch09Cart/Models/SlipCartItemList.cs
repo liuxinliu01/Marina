@@ -27,10 +27,13 @@ namespace Ch09Cart.Models
 
         public SlipCartItem this[string id]
         {
+            
             get
             {
                 foreach (SlipCartItem c in slipcartItems)
+
                     if (c.Slip.SlipID == Convert.ToInt32( id)) return c;
+
                 return null;
             }
         }
